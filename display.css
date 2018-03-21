@@ -1,0 +1,92 @@
+body
+{
+	font-size:15px;
+	background-image:url('dbms2.jpg');
+	color:white;
+	background-attachment:fixed;
+	background-repeat:no-repeat;
+	background-position:right bottom;
+}
+
+table
+{
+	padding:20px;
+	margin:25px;
+	background: rgba(20, 25, 20, 0.5);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	text-align:center;
+	width:96%;
+	cellpadding:5px;
+}
+
+th
+{
+	border: 0.5px solid black;
+	border-collapse: collapse;
+	text-align:center;
+	background-color:darkred;
+}
+
+td
+{
+	padding:10px;
+	border-collapse: collapse;
+}
+
+.det
+{
+	color:white;
+	font-size:30px;
+	border-bottom:3px solid darkred;
+}
+
+.but
+{
+	margin-left:375px;
+	color:white;
+	border:1px solid darkred;
+	padding:10px;
+	background-color:darkred;
+	transition: ease-in-out 0.3s;
+}
+
+.but:hover
+{
+	
+	transform: translateY(-5.5px);
+}
+
+.ins
+{
+	position: absolute;
+    height: 400px;
+    width: 500px;
+    margin: -100px 0 0 -200px;
+    top: 45%;
+    left: 45%;
+	
+	padding:20px;
+	
+	background: rgba(20, 25, 20, 0.5);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	
+	
+}
+
+.ins2
+{
+	
+	position: absolute;
+    height: 50px;
+	font-size:20px;
+	text-align:center;
+    width: 500px;
+    margin: -100px 0 0 -200px;
+    top: 50%;
+    left: 45%;
+	
+	padding:10px;
+	
+	background: rgba(20, 25, 20, 0.5);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

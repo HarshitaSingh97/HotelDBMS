@@ -1,0 +1,10 @@
+create table employee(emp_id char(5) constraint p1key primary key,salary integer default 0,DOB date,address varchar(100),phno integer(10));
+create table manager(emp_id char(5) constraint p2key primary key,name varchar(20),constraint f1key foreign key(emp_id) references employee(emp_id) on delete cascade);
+create table department(dno varchar(4) constraint p3key primary key,dname varchar(20),mgr_id char(5),constraint f2key foreign key(mgr_id) references manager(emp_id) on delete cascade);
+create table chef(emp_id char(5) constraint p4key primary key,name varchar(20),types varchar(20),dno varchar(4),constraint f3key foreign key(emp_id) references employee(emp_id) on delete cascade,constraint f4key foreign key(dno) references department(dno) on delete cascade);
+create table cashier(emp_id char(5) constraint p5key primary key,name varchar(20),dno varchar(4),constraint f5key foreign key(emp_id) references employee(emp_id) on delete cascade,constraint f6key foreign key(dno) references department(dno) on delete cascade);
+create table waiter(emp_id char(5) constraint p6key primary key,name varchar(20),dno varchar(4),constraint f7key foreign key(emp_id) references employee(emp_id) on delete cascade,constraint f8key foreign key(dno) references department(dno) on delete cascade);
+create table menu(items varchar(20),chef_id char(5),price integer,constraint p7key primary key(items,chef_id),constraint f8key foreign key(chef_id) references chef(emp_id));
+create table customer(customer_id char(6) constraint p8key primary key,name varchar(20),address varchar(100),phno integer(10));
+create table room(room_no char(4) constraint p9key primary key,types varchar(10),price integer);
+create table orders(order_no integer constraint p10key primary key);
